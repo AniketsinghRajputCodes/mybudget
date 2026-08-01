@@ -12,8 +12,7 @@ export default function ResetPasswordPage() {
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="w-full max-w-sm space-y-6">
         <h1 className="text-2xl font-semibold text-center">Set a new password</h1>
-
-   qwen2.5-coder:3b     <form action={formAction} className="space-y-4">
+ <form action={formAction} className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">New password</label>
             <input
