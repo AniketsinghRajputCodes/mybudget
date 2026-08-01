@@ -13,11 +13,11 @@ export default function DeleteButton({ id }: { id: string }) {
         <button
           onClick={() => startTransition(async () => { await deleteTransaction(id) })}
           disabled={isPending}
-          className="text-red-600 font-medium underline"
+          className="btn-danger px-0 py-0 text-xs underline"
         >
           {isPending ? 'Deleting...' : 'Confirm delete'}
         </button>
-        <button onClick={() => setConfirming(false)} className="text-gray-500 underline">
+        <button onClick={() => setConfirming(false)} className="btn-secondary px-0 py-0 text-xs underline">
           Cancel
         </button>
       </span>
@@ -25,7 +25,7 @@ export default function DeleteButton({ id }: { id: string }) {
   }
 
   return (
-    <button onClick={() => setConfirming(true)} className="text-xs text-red-600 underline">
+    <button onClick={() => setConfirming(true)} className="btn-danger px-0 py-0 text-xs underline">
       Delete
     </button>
   )

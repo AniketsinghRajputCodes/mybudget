@@ -26,7 +26,7 @@ export default function AddTransactionPage() {
   }, [state.success])
 
   return (
-    <div className="max-w-md mx-auto px-4 py-8">
+    <div className="page">
       <h1 className="text-2xl font-semibold mb-6">Add Transaction</h1>
 
       <form key={formKey} action={formAction} className="space-y-4">
@@ -36,7 +36,7 @@ export default function AddTransactionPage() {
             type="button"
             onClick={() => setType('expense')}
             className={`flex-1 py-2 text-sm font-medium ${
-              type === 'expense' ? 'bg-red-600 text-white' : 'bg-white text-gray-700'
+              type === 'expense' ? 'btn-danger' : 'btn-ghost'
             }`}
           >
             Expense
@@ -45,7 +45,7 @@ export default function AddTransactionPage() {
             type="button"
             onClick={() => setType('income')}
             className={`flex-1 py-2 text-sm font-medium ${
-              type === 'income' ? 'bg-green-600 text-white' : 'bg-white text-gray-700'
+              type === 'income' ? 'btn-primary' : 'btn-ghost'
             }`}
           >
             Income
@@ -99,7 +99,7 @@ export default function AddTransactionPage() {
           <button
             type="button"
             onClick={() => setUseCustomCategory(!useCustomCategory)}
-            className="text-xs text-gray-500 underline mt-1"
+            className="btn-ghost mt-1 px-0 py-0 text-xs underline"
           >
             {useCustomCategory ? 'Choose from list instead' : '+ Add custom category'}
           </button>
@@ -137,7 +137,7 @@ export default function AddTransactionPage() {
             name="intent"
             value="save"
             disabled={pending}
-            className="flex-1 rounded-md bg-black text-white py-2 font-medium disabled:opacity-50"
+            className="btn-primary flex-1"
           >
             {pending ? 'Saving...' : 'Save'}
           </button>
@@ -146,7 +146,7 @@ export default function AddTransactionPage() {
             name="intent"
             value="add-another"
             disabled={pending}
-            className="flex-1 rounded-md border py-2 font-medium disabled:opacity-50"
+            className="btn-secondary flex-1"
           >
             Save & add another
           </button>
