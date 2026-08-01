@@ -17,8 +17,8 @@ export default function TrendChart({ data }: { data: MonthlyPoint[] }) {
         <YAxis fontSize={12} stroke="var(--color-muted)" />
         <Tooltip formatter={(value) => `₹${Number(value).toFixed(2)}`} />
         <Legend />
-        <Bar dataKey="income" fill="var(--color-income)" name="Income" radius={[4, 4, 0, 0]} />
-        <Bar dataKey="expense" fill="var(--color-expense)" name="Expense" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="income" fill="#059669" name="Income" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="expense" fill="#e11d48" name="Expense" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   )

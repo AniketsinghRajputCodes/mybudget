@@ -2,16 +2,7 @@
 
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts'
 
-const COLORS = [
-  'var(--color-primary)',
-  'var(--color-expense)',
-  '#eab308',
-  'var(--color-income)',
-  '#06b6d4',
-  '#8b5cf6',
-  '#ec4899',
-  '#f97316',
-]
+const COLORS = ['#7c3aed', '#e11d48', '#f59e0b', '#059669', '#06b6d4', '#ec4899']
 
 export default function CategoryChart({ data }: { data: { name: string; value: number }[] }) {
   if (data.length === 0) {

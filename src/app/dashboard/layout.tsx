@@ -10,17 +10,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <header className="hidden md:flex items-center justify-between border-b border-border px-6 py-4">
         <div className="flex items-center gap-8">
           <span className="font-bold text-lg text-primary">MyBudget</span>
-          <nav className="flex gap-6 text-sm font-medium text-muted">
-            <Link href="/dashboard" className="hover:text-foreground transition-colors">
+          <nav className="flex gap-6 text-sm font-medium">
+            <Link href="/dashboard" className="nav-link">
               Home
             </Link>
-            <Link href="/dashboard/add" className="hover:text-foreground transition-colors">
+            <Link href="/dashboard/add" className="nav-link">
               Add Transaction
             </Link>
-            <Link
-              href="/dashboard/transactions"
-              className="hover:text-foreground transition-colors"
-            >
+            <Link href="/dashboard/transactions" className="nav-link">
               History
             </Link>
           </nav>
@@ -28,7 +25,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <form action={signOut}>
-            <button className="text-sm text-muted hover:text-foreground underline transition-colors">
+            <button className="text-sm text-foreground underline transition-colors">
               Sign out
             </button>
           </form>
@@ -41,7 +38,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="flex items-center gap-1">
           <ThemeToggle />
           <form action={signOut}>
-            <button className="text-xs text-muted underline px-2">Sign out</button>
+            <button className="text-xs text-foreground underline px-2">Sign out</button>
           </form>
         </div>
       </header>
@@ -52,7 +49,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <nav className="md:hidden fixed bottom-0 left-0 right-0 border-t border-border bg-surface flex justify-around items-center py-2 z-50">
         <Link
           href="/dashboard"
-          className="flex flex-col items-center gap-0.5 text-muted hover:text-primary transition-colors px-4 py-1"
+          className="nav-link flex flex-col items-center gap-0.5 px-4 py-1"
         >
           <LayoutDashboard size={22} />
           <span className="text-xs font-medium">Home</span>
@@ -66,7 +63,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </Link>
         <Link
           href="/dashboard/transactions"
-          className="flex flex-col items-center gap-0.5 text-muted hover:text-primary transition-colors px-4 py-1"
+          className="nav-link flex flex-col items-center gap-0.5 px-4 py-1"
         >
           <History size={22} />
           <span className="text-xs font-medium">History</span>
