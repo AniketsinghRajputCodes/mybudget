@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'MyBudget - Expense Tracker',
     short_name: 'MyBudget',
     description: 'Track your income and expenses',
-    start_url: '/dashboard',
+    start_url: '/',
     display: 'standalone',
     background_color: '#100b21',
     theme_color: '#7c3aed',
