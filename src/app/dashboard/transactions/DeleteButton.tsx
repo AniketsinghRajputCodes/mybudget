@@ -11,7 +11,7 @@ export default function DeleteButton({ id }: { id: string }) {
     return (
       <span className="inline-flex gap-2 text-xs">
         <button
-          onClick={() => startTransition(() => deleteTransaction(id))}
+          onClick={() => startTransition(async () => { await deleteTransaction(id) })}
           disabled={isPending}
           className="text-red-600 font-medium underline"
         >
