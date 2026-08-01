@@ -1,7 +1,7 @@
 'use client'
 
 import { useActionState } from 'react'
-import { updateTransaction } from '../../actions'
+import { updateTransaction } from '../../../actions'
 import { EXPENSE_CATEGORIES, INCOME_CATEGORIES, PAYMENT_METHODS } from '@/lib/categories'
 
 const initialState = { error: '' }
