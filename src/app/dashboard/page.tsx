@@ -87,8 +87,7 @@ export default async function DashboardHome() {
   return (
     <div className="max-w-3xl mx-auto px-5 pt-6 space-y-10">
       <div>
-        <p className="text-sm text-muted">Welcome back</p>
-        <h1 className="text-xl font-semibold">{user?.email}</h1>
+        <h1 className="text-xl font-semibold">Welcome back</h1>
       </div>
 
       {/* Summary cards */}
