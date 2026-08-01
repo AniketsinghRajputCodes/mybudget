@@ -10,7 +10,7 @@ export async function signUp(prevState: { error: string }, formData: FormData) {
 
   const supabase = await createClient()
 
-  const { error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
@@ -21,6 +21,14 @@ export async function signUp(prevState: { error: string }, formData: FormData) {
 
   if (error) {
     return { error: error.message }
+  }
+
+  // If Supabase returned an active session, email confirmation is
+  // disabled on this project - the user is already signed in, so send
+  // them straight into the app instead of a misleading "check your
+  // email" message.
+  if (data.session) {
+    redirect('/dashboard/add')
   }
 
   redirect('/auth/check-email')
